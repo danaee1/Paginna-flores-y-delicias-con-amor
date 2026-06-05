@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Flores y Delicias con Amor</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Quicksand:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="nav-logo">
+        <img src="img/logo.png" alt="Logo"> Flores y Delicias
+      </a>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="page-hero page-hero-contacto">
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content container">
+      <h1>Contáctanos</h1>
+      <p>Estamos aquí para ayudarte. Escríbenos y te responderemos a la brevedad.</p>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="contact-wrapper">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="+56 9 1234 5678">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos qué necesitas..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">Enviar mensaje</button>
+          <p id="form-feedback" class="form-feedback"></p>
+        </form>
+        <div class="contact-info">
+          <h3>Información de contacto</h3>
+          <div class="info-item">
+            <i class="fab fa-whatsapp"></i>
+            <span>+56 9 1234 5678</span>
+          </div>
+          <div class="info-item">
+            <i class="fab fa-instagram"></i>
+            <span>@floresydeliciasconamor</span>
+          </div>
+          <div class="info-item">
+            <i class="far fa-envelope"></i>
+            <span>contacto@floresydelicias.cl</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Santiago, Chile</span>
+          </div>
+          <div class="info-item">
+            <i class="far fa-clock"></i>
+            <span>Lun–Sáb: 9:00–19:00</span>
+          </div>
+          <div class="info-social">
+            <a href="https://wa.me/56912345678" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/floresydeliciasconamor" target="_blank" rel="noopener"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:contacto@floresydelicias.cl" aria-label="Correo"><i class="far fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 Flores y Delicias con Amor. Todos los derechos reservados.</p>
+      <p>Hecho con <i class="fas fa-heart"></i> para endulzar y embellecer tu vida.</p>
+      <div class="footer-links">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="reposteria.html">Repostería</a>
+        <a href="flores.html">Flores</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
