@@ -298,6 +298,10 @@ ul {
     margin-bottom: 12px;
 }
 
+#galeria-reposteria {
+    color: var(--mauve);
+}
+
 .section-desc {
     text-align: center;
     color: var(--texto-claro);
@@ -524,7 +528,7 @@ ul {
 }
 
 .page-hero-flores {
-  background: url('https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=1600&q=80') center / cover no-repeat;
+  background: url('https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=1600&q=80') center / cover no-repeat;
 }
 
 .page-hero-contacto {
