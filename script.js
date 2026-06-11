@@ -21,51 +21,53 @@ navLinks.forEach(link => {
 const form = document.getElementById('contact-form');
 const feedback = document.getElementById('form-feedback');
 
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (form) {
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    const nombre = document.getElementById('nombre').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const telefono = document.getElementById('telefono').value.trim();
-    const mensaje = document.getElementById('mensaje').value.trim();
+        const nombre = document.getElementById('nombre').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const telefono = document.getElementById('telefono').value.trim();
+        const mensaje = document.getElementById('mensaje').value.trim();
 
-    feedback.textContent = '';
-    feedback.className = 'form-feedback';
+        feedback.textContent = '';
+        feedback.className = 'form-feedback';
 
-    if (!nombre) {
-        showError('Por favor ingresa tu nombre.');
-        return;
-    }
+        if (!nombre) {
+            showError('Por favor ingresa tu nombre.');
+            return;
+        }
 
-    if (!email) {
-        showError('Por favor ingresa tu correo electrónico.');
-        return;
-    }
+        if (!email) {
+            showError('Por favor ingresa tu correo electrónico.');
+            return;
+        }
 
-    if (!isValidEmail(email)) {
-        showError('Ingresa un correo electrónico válido.');
-        return;
-    }
+        if (!isValidEmail(email)) {
+            showError('Ingresa un correo electrónico válido.');
+            return;
+        }
 
-    if (telefono && !isValidPhone(telefono)) {
-        showError('Ingresa un número de teléfono válido (solo dígitos y opcionalmente +).');
-        return;
-    }
+        if (telefono && !isValidPhone(telefono)) {
+            showError('Ingresa un número de teléfono válido (solo dígitos y opcionalmente +).');
+            return;
+        }
 
-    if (!mensaje) {
-        showError('Por favor escribe un mensaje.');
-        return;
-    }
+        if (!mensaje) {
+            showError('Por favor escribe un mensaje.');
+            return;
+        }
 
-    if (mensaje.length < 10) {
-        showError('El mensaje debe tener al menos 10 caracteres.');
-        return;
-    }
+        if (mensaje.length < 10) {
+            showError('El mensaje debe tener al menos 10 caracteres.');
+            return;
+        }
 
-    feedback.textContent = 'Mensaje enviado con éxito. Te contactaremos pronto.';
-    feedback.className = 'form-feedback success';
-    form.reset();
-});
+        feedback.textContent = 'Mensaje enviado con éxito. Te contactaremos pronto.';
+        feedback.className = 'form-feedback success';
+        form.reset();
+    });
+}
 
 function showError(msg) {
     feedback.textContent = msg;
